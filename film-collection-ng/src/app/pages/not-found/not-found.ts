@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-not-found',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './not-found.html',
   styleUrl: './not-found.scss',
 })
-export class NotFound {}
+export class NotFound {
+  title = signal("Page not found");
+}
