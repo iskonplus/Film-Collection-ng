@@ -1,0 +1,39 @@
+@use "../../styles/variables" as *;
+
+:host {
+  display: flex;
+  width: 1200px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  text-transform: lowercase;
+
+  a {
+    color: $light-blue-color;
+    text-decoration: none;
+    font-weight: 300;
+    transition: .3s;
+
+    &:hover {
+    color: $white-color;
+    }
+
+  }
+
+  .separator {
+    color:  $light-blue-color;
+  }
+
+  .current {
+    color: $light-blue-color;
+        font-weight: 200;
+  }
+
+}

@@ -1,15 +1,17 @@
 @use "../../styles/variables" as *;
 
-header {
-  display: flex;
+
+  header {
+  position: fixed;
   width: 100%;
+  display: flex;
+  flex-direction: column;
   min-height: 100px;
-  padding: 25px 15px;
+  padding: 25px 15px 15px;
   font-size: 14px;
   background-color: $blue-color;
   color: $white-color;
-  border-bottom: 2px solid $light-blue-color;
-  position: fixed;
+  margin:auto;
 
   .wrapper-header {
     display: flex;
@@ -17,10 +19,12 @@ header {
     align-items: center;
     justify-content: space-between;
     margin: auto;
-    border-bottom: 2px solid $blue-color;
+    border-bottom: 2px solid $light-blue-color;
+    padding-bottom: 10px;
     color: $white-color;
     gap: 15px;
     flex-wrap: wrap;
+
 
     .logo {
       text-decoration: none;
@@ -40,11 +44,21 @@ header {
 
         &:hover {
           color: $light-blue-color;
+
+          img {
+            border-color: $light-blue-color;
+
+          }
         }
 
         img {
           width: 40px;
+          margin-left: -2px;
+          border: 3px solid $white-color;
+          border-radius: 50%;
+          transition: .3s;
         }
+
       }
     }
 
@@ -70,4 +84,15 @@ header {
 
 
   }
+}
+
+
+@media (max-width: 380px) {
+  header {
+  .wrapper-header {
+    justify-content: space-around;
+    gap:10px
+  }
+  }
+
 }

@@ -9,4 +9,5 @@ export const routes: Routes = [
   ...filmDetailsRoutes,
   ...aboutRoutes,
   ...notFoundRoutes,
+  { path: '**', redirectTo: '404'},
 ];

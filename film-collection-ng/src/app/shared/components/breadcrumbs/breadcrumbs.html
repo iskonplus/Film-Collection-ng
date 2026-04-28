@@ -1,0 +1,10 @@
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+
+  <a [routerLink]="'/'">Home</a>
+
+  @if (breadcrumbs()?.label; as crumb) {
+  <span class="separator">-></span>
+  <span class="current">{{ crumb }}</span>
+  }
+
+</nav>
