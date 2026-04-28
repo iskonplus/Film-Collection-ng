@@ -8,7 +8,7 @@
 .film-details {
   width: 100%;
   max-width: $max-width;
-  padding: 45px 0px;
+  padding: 45px 15px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -22,11 +22,11 @@
   background-color: $light-blue-color;
   cursor: pointer;
   transition: .3s;
-  color:$white-color;
+  color: $white-color;
   text-transform: uppercase;
-  border:none;
+  border: none;
 
-  &:hover{
+  &:hover {
     background-color: $blue-color;
   }
 }
@@ -41,10 +41,9 @@
 }
 
 .film-details-poster {
-  width: 30%;
-  max-width: 300px;
+  width: 300px;
   border-radius: 12px;
-      box-shadow: 0px 8px 10px $dark-blue-color;
+  box-shadow: 0px 8px 10px $dark-blue-color;
 }
 
 .film-details-info {
@@ -70,4 +69,35 @@
 .film-details-description {
   margin-top: 20px;
   line-height: 1.6;
+}
+
+@media (max-width: 850px) {
+  .film-details-info {
+    width: 100%;
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 460px) {
+    .film-details {
+  padding: 45px 10px;
+
+}
+
+    .film-details-info {
+      h1{
+        font-size: 25px;
+      }
+      .description {
+        flex-direction: column;
+        padding-bottom: 25px;
+        border-bottom: 2px solid $light-blue-color;
+      }
+
+    }
+  }
+
+
 }
