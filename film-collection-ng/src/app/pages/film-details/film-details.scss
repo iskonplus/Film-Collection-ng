@@ -1,0 +1,73 @@
+@use "../../shared/styles/_variables.scss" as *;
+
+:host {
+  width: 100%;
+}
+
+
+.film-details {
+  width: 100%;
+  max-width: $max-width;
+  padding: 45px 0px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.back-btn {
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 10px 60px;
+  border-radius: 9px;
+  background-color: $light-blue-color;
+  cursor: pointer;
+  transition: .3s;
+  color:$white-color;
+  text-transform: uppercase;
+  border:none;
+
+  &:hover{
+    background-color: $blue-color;
+  }
+}
+
+.film-details-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.film-details-poster {
+  width: 30%;
+  max-width: 300px;
+  border-radius: 12px;
+      box-shadow: 0px 8px 10px $dark-blue-color;
+}
+
+.film-details-info {
+  width: 60%;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .wrapper-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+    border-bottom: 1px dashed $light-blue-color;
+    padding: 5px 0px 15px;
+    margin-bottom: 15px;
+    gap: 15px
+  }
+
+}
+
+.film-details-description {
+  margin-top: 20px;
+  line-height: 1.6;
+}
