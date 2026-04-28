@@ -1,0 +1,73 @@
+@use "../../styles/variables" as *;
+
+header {
+  display: flex;
+  width: 100%;
+  min-height: 100px;
+  padding: 25px 15px;
+  font-size: 14px;
+  background-color: $blue-color;
+  color: $white-color;
+  border-bottom: 2px solid $light-blue-color;
+  position: fixed;
+
+  .wrapper-header {
+    display: flex;
+    width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    border-bottom: 2px solid $blue-color;
+    color: $white-color;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    .logo {
+      text-decoration: none;
+
+      .wrapper-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white-color;
+        font-size: 18px;
+        text-transform: uppercase;
+        transition: .3s;
+        gap: 2px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-shadow: -2px 2px 4px $dark-blue-color;
+
+        &:hover {
+          color: $light-blue-color;
+        }
+
+        img {
+          width: 40px;
+        }
+      }
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+
+      a {
+        color: $white-color;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+        transition: .3s;
+      }
+
+      a:hover,
+      .active {
+        color: $light-blue-color;
+      }
+    }
+
+
+  }
+}
