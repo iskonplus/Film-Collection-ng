@@ -1,0 +1,74 @@
+@use "../../styles/variables" as *;
+
+.film-card {
+  width: 100%;
+  max-width: 300px;
+  max-height: 470px;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid $light-blue-color;
+  border-radius: 9px;
+  background: $white-color;
+  transition: .3s;
+  padding-bottom: 25px;
+  position: relative;
+
+  &:hover {
+    scale: 1.02;
+    box-shadow: 0px 8px 10px $dark-blue-color;
+  }
+  &:hover .favorite {
+          font-size: 40px;
+  }
+
+}
+
+.film-card-poster {
+  width: 100%;
+  aspect-ratio: 3 / 2.5;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.film-card-content {
+
+  .wrapper-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed $light-blue-color;
+    padding: 5px 0px;
+
+  }
+
+  padding: 15px;
+
+  h3 {
+    min-height: 50px;
+    margin: 0 0 12px;
+    color: $dark-blue-color;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  p {
+    color: $blue-color;
+  }
+
+  .favorite {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color:$dark-red;
+    transition: .3s;
+    text-shadow: 0px 0px 5px $white-color;
+    font-weight: 600;
+
+  }
+
+}

@@ -1,1 +1,9 @@
-<p>home works!</p>
+<section class="container">
+  <p>home works!</p>
+</section>
+<section class="container">
+  @for (film of filmService.films();  track film.id) {
+  <app-film-card [film]="film" (favoriteToggled)="favoriteToggled($event)"></app-film-card>
+  }
+</section>
+

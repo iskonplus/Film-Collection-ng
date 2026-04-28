@@ -1,0 +1,16 @@
+@use "../../shared/styles/variables" as *;
+
+:host{
+  width: 100%;
+}
+.container{
+    width: 100%;
+  max-width: $max-width;
+  margin: auto;
+  padding: 45px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap:40px 15px;
+}
