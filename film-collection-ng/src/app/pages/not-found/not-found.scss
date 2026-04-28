@@ -36,4 +36,11 @@ p {
     margin-bottom: 40px;
   }
 
+  @media (max-width: 420px) {
+    :host {
+      margin-top: 65px;
+    }
+  }
+
+
 }
