@@ -11,7 +11,7 @@ footer {
 
   .wrapper-footer {
     display: flex;
-    width: 1200px;
+    width: $max-width;
     align-items: center;
     justify-content: space-between;
     margin: auto;

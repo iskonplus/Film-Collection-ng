@@ -15,7 +15,8 @@
 
   .wrapper-header {
     display: flex;
-    width: 1200px;
+    width: 100%;
+    max-width: $max-width;
     align-items: center;
     justify-content: space-between;
     margin: auto;
