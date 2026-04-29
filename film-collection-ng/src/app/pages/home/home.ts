@@ -1,10 +1,11 @@
 import { Component, computed, inject, signal } from '@angular/core';
 import { FilmCard } from '../../shared/components/film-card/film-card';
 import { FilmService } from '../../shared/services/film.service';
+import { Autofocus } from '../../shared/directives/autofocus';
 
 @Component({
   selector: 'app-home',
-  imports: [FilmCard],
+  imports: [FilmCard, Autofocus],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
@@ -23,7 +24,7 @@ export class Home {
 
   filteredFilms = computed(() => {
     const value = this.searchValue().trim().toLocaleLowerCase();
-    
+
     return this.filmService.films().filter(film => {
       return film.title.toLowerCase().includes(value);
     })

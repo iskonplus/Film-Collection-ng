@@ -1,18 +1,18 @@
 <section class="container search">
   <h1>Find your film</h1>
-  <input type="text" name="name" id="input" placeholder="Search films..." (input)="onSearch($event)">
+  <input appAutofocus type="text" name="name" id="input" placeholder="Search films..." (input)="onSearch($event)">
 </section>
 <section class="container">
 
   @if(filteredFilms(); as films){
-    @if(films.length > 0){
+  @if(films.length > 0){
 
-      @for (film of films; track film.id) {
-         <app-film-card [film]="film" (favoriteToggled)="favoriteToggled($event)"></app-film-card>
-      }
-    }@else{
-     <p>Nothing found</p>
-    }
+  @for (film of films; track film.id) {
+  <app-film-card [film]="film" (favoriteToggled)="favoriteToggled($event)"></app-film-card>
+  }
+  }@else{
+  <p>Nothing found</p>
+  }
   }
 
 </section>
