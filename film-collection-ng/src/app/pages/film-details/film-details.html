@@ -1,0 +1,42 @@
+<section class="film-details">
+
+  @if (film) {
+  <div class="film-details-content">
+
+    <img class="film-details-poster" [src]="film.posterUrl" [alt]="film.title" />
+    <div class="film-details-info">
+
+      <h1>{{ film.title }}</h1>
+
+      <div class="wrapper-content description">
+        <p>Description:</p>
+        <p>{{ film.description }}</p>
+      </div>
+
+      <div class="wrapper-content">
+        <p>Year:</p>
+        <p>{{ film.year }}</p>
+      </div>
+      <div class="wrapper-content">
+        <p>Genre:</p>
+        <p>{{ film.genre }}</p>
+      </div>
+      <div class="wrapper-content">
+        <p>Rating:</p>
+        <p>{{ film.rating }} / 10</p>
+      </div>
+      <div class="wrapper-content">
+        <p>Duration:</p>
+        <p>{{ film.duration | duration }}</p>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  }
+
+    <button routerLink="/" class="back-btn">Back</button>
+
+</section>

@@ -1,0 +1,100 @@
+@use "../../styles/variables" as *;
+
+
+  header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  padding: 25px 15px 15px;
+  font-size: 14px;
+  background-color: $blue-color;
+  color: $white-color;
+  margin:auto;
+  z-index: 3;
+
+  .wrapper-header {
+    display: flex;
+    width: 100%;
+    max-width: $max-width;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    border-bottom: 2px solid $light-blue-color;
+    padding-bottom: 10px;
+    color: $white-color;
+    gap: 15px;
+    flex-wrap: wrap;
+
+
+    .logo {
+      text-decoration: none;
+
+      .wrapper-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white-color;
+        font-size: 18px;
+        text-transform: uppercase;
+        transition: .3s;
+        gap: 2px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        text-shadow: -2px 2px 4px $dark-blue-color;
+
+        &:hover {
+          color: $light-blue-color;
+
+          img {
+            border-color: $light-blue-color;
+
+          }
+        }
+
+        img {
+          width: 40px;
+          margin-left: -2px;
+          border: 3px solid $white-color;
+          border-radius: 50%;
+          transition: .3s;
+        }
+
+      }
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+
+      a {
+        color: $light-blue-color;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+        transition: .3s;
+      }
+
+      a:hover,
+      .active {
+        color: $white-color;
+      }
+    }
+
+
+  }
+}
+
+
+@media (max-width: 445px) {
+  header {
+  .wrapper-header {
+    justify-content: space-around;
+    gap:10px
+  }
+  }
+
+}

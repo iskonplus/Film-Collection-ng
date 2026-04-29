@@ -1,0 +1,46 @@
+@use "../../shared/styles/_variables.scss" as *;
+
+:host {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 60px;
+  color: $dark-red;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+h2 {
+  font-size: 10em;
+  font-weight: 300;
+}
+
+p {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: $dark-blue-color;
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  :host {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 420px) {
+    :host {
+      margin-top: 65px;
+    }
+  }
+
+
+}

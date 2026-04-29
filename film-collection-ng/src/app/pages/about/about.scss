@@ -1,0 +1,28 @@
+@use "../../shared/styles/variables" as *;
+
+:host {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: $max-width;
+  margin: auto;
+  padding: 45px 15px;
+
+
+  h1 {
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: $dark-blue-color;
+  }
+
+  p{
+    max-width: 80%;
+    font-size: 16px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,35 @@
+<article class="film-card" [routerLink]="['/film-details', film().id]">
+  <img class="film-card-poster" [src]="film().posterUrl" [alt]="film().title" />
+
+  <div class="film-card-content">
+    <h3>{{ film().title }}</h3>
+
+    <div class="wrapper-content">
+      <p>Year:</p>
+      <p>{{ film().year }}</p>
+    </div>
+
+    <div class="wrapper-content">
+      <p>Genre:</p>
+      <p>{{ film().genre }}</p>
+    </div>
+
+    <div class="wrapper-content">
+      <p>Rating:</p>
+      <p>{{ film().rating }} / 10</p>
+    </div>
+
+
+    <span class="favorite" (click)="onToggleFavorite($event)">
+
+      @if (film().isFavorite) {
+      &#9829;
+      } @else {
+      &#9825;
+      }
+
+    </span>
+
+  </div>
+
+</article>

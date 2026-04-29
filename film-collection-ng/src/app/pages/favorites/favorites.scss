@@ -1,0 +1,66 @@
+@use "../../shared/styles/variables" as *;
+
+:host {
+  width: 100%;
+  max-width: $max-width;
+  padding: 0px 15px 45px;
+  display: block;
+
+
+  h1 {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    border-bottom: 1px solid $blue-color;
+    padding: 15px 0px;
+    margin-bottom: 35px;
+  }
+
+  .container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px 15px;
+    margin-bottom: 35px;
+  }
+
+  .back-btn {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px 60px;
+    border-radius: 9px;
+    background-color: $light-blue-color;
+    cursor: pointer;
+    transition: .3s;
+    color: $white-color;
+    text-transform: uppercase;
+    border: none;
+
+    &:hover {
+      background-color: $blue-color;
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .container {
+    justify-content: space-around;
+
+  }
+
+  @media (max-width: 460px) {
+    :host {
+      h1 {
+        padding-top: 45px;
+      }
+    }
+
+  }
+}

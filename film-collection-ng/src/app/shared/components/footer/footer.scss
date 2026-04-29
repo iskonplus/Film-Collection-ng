@@ -1,0 +1,32 @@
+@use "../../styles/variables" as *;
+
+footer {
+  display: flex;
+  width: 100%;
+  padding: 25px 15px;
+  font-size: 14px;
+  background-color: $dark-blue-color;
+  color: $white-color;
+  border-top: 2px solid $light-blue-color;
+
+  .wrapper-footer {
+    display: flex;
+    width: $max-width;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding-bottom: 20px;
+      border-bottom: 2px solid $blue-color;
+
+    a {
+      color: $white-color;
+      text-decoration: none;
+      font-weight: 500;
+      transition: .3s;
+
+      &:hover {
+        color: $light-blue-color;
+      }
+    }
+  }
+}
