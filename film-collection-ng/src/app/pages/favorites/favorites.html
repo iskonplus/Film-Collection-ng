@@ -1,0 +1,17 @@
+<h1>Your favorites movies</h1>
+
+<section class="container">
+  @if(favorites(); as films){
+  @if(films.length > 0){
+
+  @for (film of films; track film.id) {
+  <app-film-card [film]="film" (favoriteToggled)="favoriteToggled($event)"></app-film-card>
+  }
+  }@else{
+  <p>No favorite movies yet</p>
+  }
+  }
+
+</section>
+
+<button routerLink="/" class="back-btn">Back</button>

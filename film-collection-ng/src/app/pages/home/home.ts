@@ -25,8 +25,8 @@ export class Home {
   filteredFilms = computed(() => {
     const value = this.searchValue().trim().toLocaleLowerCase();
 
-    return this.filmService.films().filter(film => {
+    return this.filmService.films().filter((film) => {
       return film.title.toLowerCase().includes(value);
-    })
-  })
+    });
+  });
 }

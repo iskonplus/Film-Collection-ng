@@ -20,6 +20,7 @@ export class Breadcrumbs {
     if (url === '/') return undefined;
 
     if (url === '/about') return { label: 'About', url: '/about' };
+    if (url === '/favorites') return { label: 'Favorites', url: '/favorites' };
 
     if (url.startsWith('/film-details')) {
       const id = Number(url.split('/')[2]);
